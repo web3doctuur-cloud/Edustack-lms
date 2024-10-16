@@ -51,8 +51,9 @@ const Home = () => {
             <div className='w-screen flex flex-col  md:flex-row'>
                 {/* Left Column - Text Content */}
                 <div className='flex-1 h-screen flex justify-center items-center'>
-                    <div className='bg-gray-200 mx-5 md:m-20 h-auto hidden md:inline md:h-screen rounded-lg flex flex-col justify-center items-center'>
-                        <button className='bg-green-700 p-5 rounded-lg shadow-lg'>
+                    <div className='bg-gray-200 mx-5 md:m-20 h-auto justify-center items-center flex hidden md:inline md:h-screen rounded-lg flex flex-col justify-center items-center'>
+                        <button className='ml-14 bg-green-700 p-5 justify
+                        -center w-96 flex items-center rounded-lg shadow-lg'>
                             <h2 className='text-white text-2xl font-bold'>{homes[currentIndex].words}</h2>
                         </button>
                         <p className='italic font-bold p-6 text-lg text-black text-center'>
@@ -77,7 +78,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='bg-transparent mx-5  m-20 md:m-20 h-auto z-40 relative md:hidden md:h-screen rounded-lg flex flex-col justify-center items-center'>
-                        <button className='bg-green-700 p-2 m-10 bg-transparent border-2 border-orange-500 rounded-lg shadow-lg'>
+                        <button className='p-2 m-10 bg-transparent  border-2 border-orange-500 rounded-lg shadow-lg'>
                             <h2 className='text-black  text-2xl font-bold'>{homes[currentIndex].words}</h2>
                         </button>
                         <p className='italic bg-opacity-30 bg-gray-200 font-bold p-6 text-lg text-black text-center'>
