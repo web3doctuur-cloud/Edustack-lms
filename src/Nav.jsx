@@ -19,7 +19,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="bg-transparent text-black  px-8 md:px-16 lg:px-24 w-full absolute top-0 left-0 z-50 overflow-x-hidden">
+      <nav className="bg-transparent text-black  px-8 md:px-16 lg:px-24 w-full fixed top-0 left-0 z-50 overflow-x-hidden">
         <div className="container mt-2 py-6 flex justify-between items-center">
           {/* Logo Section */}
           <div className="text-2xl font-bold flex items-center">

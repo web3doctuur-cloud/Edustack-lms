@@ -48,12 +48,11 @@ const Home = () => {
     return (
         <div className='bg-gray-200 overflow-hidden h-screen w-screen relative' id='home'>
             <Nav />
-            <div className='w-screen flex flex-col  md:flex-row'>
+            <div className='w-screen flex flex-col md:flex-row'>
                 {/* Left Column - Text Content */}
                 <div className='flex-1 h-screen flex justify-center items-center'>
-                    <div className='bg-gray-200 mx-5 md:m-20 h-auto justify-center items-center flex hidden md:inline md:h-screen rounded-lg flex flex-col justify-center items-center'>
-                        <button className='ml-14 bg-green-700 p-5 justify
-                        -center w-96 flex items-center rounded-lg shadow-lg'>
+                    <div className='bg-gray-200 mx-5 md:m-20 h-auto justify-center items-center flex hidden md:flex md:h-screen rounded-lg flex-col'>
+                        <button className='ml-14 bg-green-700 p-5 justify-center w-96 flex items-center rounded-lg shadow-lg'>
                             <h2 className='text-white text-2xl font-bold'>{homes[currentIndex].words}</h2>
                         </button>
                         <p className='italic font-bold p-6 text-lg text-black text-center'>
@@ -64,7 +63,6 @@ const Home = () => {
                             <a
                                 href="#reviews"
                                 className='font-bold bg-green-700 text-white mx-2 mb-2 hover:text-black hover:bg-transparent border hover:border-orange-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-lg'
-                                download
                             >
                                 Reviews
                             </a>
@@ -77,30 +75,31 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-transparent mx-5  m-20 md:m-20 h-auto z-40 relative md:hidden md:h-screen rounded-lg flex flex-col justify-center items-center'>
-                        <button className='p-2 m-10 bg-transparent  border-2 border-orange-500 rounded-lg shadow-lg'>
-                            <h2 className='text-black  text-2xl font-bold'>{homes[currentIndex].words}</h2>
-                        </button>
-                        <p className='italic bg-opacity-30 bg-gray-200 font-bold p-6 text-lg text-black text-center'>
-                            There is nothing serious about this website. Contact the developer for future collaboration.
-                            Check the <span><a href='#service' className='underline font-bold text-green-700'>Services</a></span> we offer that make us stand out; we ensure premium satisfaction.
-                        </p>
-                        <div className='flex flex-row items-center justify-center mt-2'>
-                            <a
-                                href="#reviews"
-                                className='font-bold bg-green-700 text-white mx-2 mb-2 hover:text-black hover:bg-transparent border hover:border-orange-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-lg'
-                              
-                            >
-                                Reviews
-                            </a>
-                            <a
-                                href='#footer'
-                                className='font-bold bg-orange-500 text-white mx-2 mb-2 hover:text-black hover:bg-transparent border hover:border-green-900 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-lg'
-                            >
-                                Contact
-                            </a>
-                        </div>
+
+                {/* Mobile View Content */}
+                <div className='bg-transparent mx-5 m-5 md:m-20 h-auto z-40 relative flex md:hidden justify-center items-center flex-col'>
+                    <button className='p-2 m-10 border-2 bg-green-700 border-orange-500 rounded-lg shadow-lg'>
+                        <h2 className='text-white text-2xl font-bold'>{homes[currentIndex].words}</h2>
+                    </button>
+                    <p className='italic bg-opacity-80 bg-white font-bold p-6 text-lg text-black text-center'>
+                        There is nothing serious about this website. Contact the developer for future collaboration.
+                        Check the <span><a href='#service' className='underline font-bold text-green-700'>Services</a></span> we offer that make us stand out; we ensure premium satisfaction.
+                    </p>
+                    <div className='flex flex-row items-center justify-center mt-5'>
+                        <a
+                            href="#reviews"
+                            className='font-bold bg-green-700 text-white mx-2 mb-2 hover:text-black hover:bg-transparent border hover:border-orange-500 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-lg'
+                        >
+                            Reviews
+                        </a>
+                        <a
+                            href='#footer'
+                            className='font-bold bg-orange-500 text-white mx-2 mb-2 hover:text-black hover:bg-transparent border hover:border-green-900 transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-lg'
+                        >
+                            Contact
+                        </a>
                     </div>
+                </div>
 
                 {/* Right Column - Image */}
                 <div className='flex-1 h-[50vh] md:h-screen flex justify-center hidden md:block items-center'>
@@ -110,7 +109,7 @@ const Home = () => {
                         className="object-contain max-w-full max-h-full"
                     />
                 </div>
-                <div className='flex-1 h-[100vh] w-screen absolute flex md:hidden justify-center items-center '>
+                <div className='flex-1 h-[100vh] w-screen absolute flex md:hidden justify-center items-center'>
                     <img
                         src={homes[currentIndex].img}
                         alt={`Slide ${homes[currentIndex].id}`}
