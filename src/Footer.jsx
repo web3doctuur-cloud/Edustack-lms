@@ -4,10 +4,10 @@ import * as Icons from 'react-bootstrap-icons';
 const Footer = () => {
   return (
     <footer className='bg-gradient-to-r from-green-700 to-green-500 text-white py-12 px-8 md:px-20 lg:px-32 w-full' id='footer'>
-      <div className="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
+      <div className="flex flex-col md:flex-row justify-between items-start space-y-10 md:space-y-0">
 
         {/* Logo and Site Info */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
+        <div className="flex flex-col items-start space-y-4">
           <div className="text-3xl font-bold flex items-center">
             <span className='text-orange-400 text-4xl font-serif'>ALmas</span>
             <span className='text-black text-2xl font-bold'>chemy</span>
@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex flex-col space-y-6 md:space-y-4">
+        <div className="flex flex-col space-y-4">
           <h2 className="text-lg font-semibold">Quick Links</h2>
           <ul className="space-y-3">
             <li className='flex items-center hover:text-orange-500 transition-all'>
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col space-y-4">
           <h2 className="text-lg font-semibold">Contact Us</h2>
           <ul className="space-y-3">
             <li className='flex items-center hover:text-orange-500 transition-all'>
@@ -66,8 +66,24 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Social Media Links */}
+      <div className="flex justify-start space-x-4 mt-8">
+        <a href="https://facebook.com" className="text-white hover:text-orange-500 transition duration-300">
+          <Icons.Facebook size={25} />
+        </a>
+        <a href="https://twitter.com" className="text-white hover:text-orange-500 transition duration-300">
+          <Icons.Twitter size={25} />
+        </a>
+        <a href="https://instagram.com" className="text-white hover:text-orange-500 transition duration-300">
+          <Icons.Instagram size={25} />
+        </a>
+        <a href="https://linkedin.com" className="text-white hover:text-orange-500 transition duration-300">
+          <Icons.Linkedin size={25} />
+        </a>
+      </div>
+
       {/* Footer Bottom */}
-      <div className="mt-12 border-t border-white pt-6 text-center text-sm">
+      <div className="mt-12 border-t border-white pt-6 text-left text-sm">
         <p>&copy; {new Date().getFullYear()} AlmasChemy. All rights reserved.</p>
       </div>
     </footer>

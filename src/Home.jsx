@@ -78,7 +78,7 @@ const Home = () => {
 
                 {/* Mobile View Content */}
                 <div className='bg-transparent mx-5 m-5 md:m-20 h-auto z-40 relative flex md:hidden justify-center items-center flex-col'>
-                    <button className='p-2 m-10 border-2 bg-green-700 border-orange-500 rounded-lg shadow-lg'>
+                    <button className='p-2 m-10 border-2 mt-20 bg-green-700 border-orange-500 rounded-lg shadow-lg'>
                         <h2 className='text-white text-2xl font-bold'>{homes[currentIndex].words}</h2>
                     </button>
                     <p className='italic bg-opacity-80 bg-white font-bold p-6 text-lg text-black text-center'>
