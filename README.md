@@ -3,7 +3,7 @@
 **EduStackPro** is a modern, responsive Learning Management System (LMS) designed to bridge the gap between Web2 development and the Decentralized Web (Web3). This version (V1) focuses on a high-end UI/UX, professional search/filter functionality, and Supabase Authentication.
 
 ## 🚀 Live Demo
-[Insert your Vercel/Netlify link here]
+[https://edustackpro.vercel.app/]
 
 ## 🛠️ Tech Stack
 - **Frontend:** React.js, Tailwind CSS (Mobile-First Design)
